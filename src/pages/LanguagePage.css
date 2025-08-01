@@ -1,0 +1,37 @@
+.link-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.link-button {
+  display: inline-block;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.link-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  border-color: #555;
+}
+
+.link-button.discord {
+  background-color: #5865f2;
+}
+
+.link-button.discord:hover {
+  background-color: #4752c4;
+}
+.container img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 12px;
+}
