@@ -1,13 +1,17 @@
 .repl-container {
   display: flex;
+  flex-direction: row;
   height: calc(100vh - 100px);
+  width: 100%;
+  max-width: 1400px;
+  margin: 2rem auto;
   border: 1px solid #444;
   border-radius: 6px;
   overflow: hidden;
   background-color: #1a1a1a;
   color: white;
-  margin-top: 2rem;
 }
+
 
 .repl-toolbar {
   width: 60px;
