@@ -43,7 +43,7 @@ export const languages: Language[] = [
     tagline: "at least we are not managing memory",
     logo: "/logos/ros.webp",
     description:
-      "ROS (Ruby on Spaces) simplifies async patterns and pretends memory management doesn’t exist.",
+      "ROS (Ruby on Spaces) simplifies its AST by a lot and pretends arguments and lists dont exist.",
   },
   {
     name: "Citron",

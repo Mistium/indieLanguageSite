@@ -84,7 +84,7 @@ export default function RosRepl() {
 
     setOutput("Running...");
     try {
-      const res = await fetch("/run", {
+      const res = await fetch("/api/run/ros", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, sources }),
