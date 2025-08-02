@@ -84,7 +84,7 @@ export default function RosRepl() {
 
     setOutput("Running...");
     try {
-      const res = await fetch("/api/run/ros", {
+      const res = await fetch("https://indielangsbackend.onrender.com/api/run/ROS", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, sources }),
