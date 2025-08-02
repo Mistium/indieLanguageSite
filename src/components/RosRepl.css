@@ -1,6 +1,6 @@
 .repl-container {
   display: flex;
-  height: 80vh;
+  height: calc(100vh - 100px);
   border: 1px solid #444;
   border-radius: 6px;
   overflow: hidden;
@@ -80,8 +80,15 @@
 .repl-editor {
   flex-grow: 1;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
+  display: flex;
 }
+
+.repl-editor > .CodeMirror {
+  flex-grow: 1;
+  height: 100% !important;
+}
+
 
 .repl-divider {
   width: 5px;
