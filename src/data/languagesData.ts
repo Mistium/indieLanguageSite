@@ -22,10 +22,10 @@ export const languages: Language[] = [
   {
     name: "X3",
     slug: "x3",
-    tagline: "No Clue lol",
+    tagline: "The only bug-free zone is your imagination. Good luck.",
     logo: "/logos/x3.png",
     description:
-      "X3 is an experimental hybrid language — maybe functional, maybe imperative, definitely mysterious.",
+      "An easy to learn language for new developers! Held together by duct tape and prayers. And yes, it runs.",
     website: "https://x3documentation.neocities.org/",
     discord: "https://discord.gg/rtcBjz5xgc",
   },
@@ -43,7 +43,7 @@ export const languages: Language[] = [
     tagline: "at least we are not managing memory",
     logo: "/logos/ros.webp",
     description:
-      "ROS (Reactive Object Script) simplifies async patterns and pretends memory management doesn’t exist.",
+      "ROS (Ruby on Spaces) simplifies async patterns and pretends memory management doesn’t exist.",
   },
   {
     name: "Citron",
@@ -64,4 +64,11 @@ export const languages: Language[] = [
       "indX is a minimalist experiment with indexes. Nobody knows what it really does, but it’s probably cool.",
     discord: "https://discord.gg/YJ3KTSfMHf",
   },
+  {
+    name: "just Compact",
+    slug: "just-compact",
+    tagline: "Logic stripped to its bare operations.",
+    logo: "logos/just-compact.png",
+    description: "a minimalist language desgined for logic and idk what else to put xDDD"
+  }
 ];
