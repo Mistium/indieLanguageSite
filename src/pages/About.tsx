@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../components/Navbar";
 import "./About.css";
 
@@ -27,3 +26,4 @@ export default function About() {
     </>
   );
 }
+
