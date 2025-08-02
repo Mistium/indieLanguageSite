@@ -6,24 +6,29 @@ export default function About() {
     <>
       <Navbar />
       <div className="about-page">
-        <h1>👋 Hi, Internet!</h1>
+        <h1>Welcome to the Indie Language Association</h1>
         <p>
-          We are the <strong>Indie Language Association</strong> — a chaotic collection of indie language devs.
-          Some of us are small. Some of us ship 200MB Electron installers for a command-line tool
-          (yes, <em>looking at you</em>, W++ 👀). But hey, it works and it’s shiny.
+          The <strong>Indie Language Association</strong> is a collaborative initiative of developers
+          passionate about creating unique and innovative programming languages. Our goal is to support
+          experimentation, learning, and community-driven language development.
         </p>
 
         <p>
-          So come along! Browse our languages, download <strong>X3</strong>, <strong>W++</strong>,
-          <strong> ROS</strong>, or whichever one speaks to your soul, and just enjoy the ride.
+          Whether you're exploring <strong>X3</strong> for its minimalistic syntax, building projects with
+          <strong> W++</strong>, or trying out <strong>ROS</strong>, we're excited to share tools that inspire
+          curiosity and creativity in programming.
         </p>
 
         <p>
-          We built this for fun, for learning, and maybe — just maybe — to overthrow HTML as a concept.
-          (Joking... mostly.)
+          This platform was created to give a spotlight to indie languages — crafted not for market share,
+          but for ideas. We welcome you to browse, experiment, contribute, and be part of a growing ecosystem
+          of alternative language design.
+        </p>
+
+        <p>
+          Thank you for visiting, and we hope you find a language that speaks to you.
         </p>
       </div>
     </>
   );
 }
-

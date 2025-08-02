@@ -36,27 +36,23 @@ export default function LanguagePage() {
 
       {/* Optional: link buttons */}
       <div style={{ marginTop: "2rem", display: "flex", gap: "1rem" }}>
-        {lang.website && (
-          <a
-            href={lang.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-          >
-            🌐 Website
-          </a>
-        )}
-        {lang.discord && (
-          <a
-            href={lang.discord}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-          >
-            💬 Discord
-          </a>
-        )}
-      </div>
+  {lang.website && (
+    <a href={lang.website} target="_blank" rel="noopener noreferrer" className="btn">
+      🌐 Website
+    </a>
+  )}
+  {lang.discord && (
+    <a href={lang.discord} target="_blank" rel="noopener noreferrer" className="btn">
+      💬 Discord
+    </a>
+  )}
+  {lang.github && (
+    <a href={lang.github} target="_blank" rel="noopener noreferrer" className="btn">
+      🐙 GitHub
+    </a>
+  )}
+</div>
+
     </motion.div>
   );
 }

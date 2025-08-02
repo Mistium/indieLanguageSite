@@ -7,8 +7,8 @@
 
 .link-button {
   display: inline-block;
-  background-color: #1e1e1e;
-  color: white;
+  background-color: #fff7ed; /* soft orange background */
+  color: #7c2d12; /* rich orange-brown text */
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -18,20 +18,24 @@
 }
 
 .link-button:hover {
-  background-color: #333;
+  background-color: #fed7aa; /* brighter orange on hover */
   transform: translateY(-2px);
-  border-color: #555;
+  border-color: #fdba74;
 }
 
 .link-button.discord {
-  background-color: #5865f2;
+  background-color: #f97316; /* vivid orange */
+  color: white;
 }
 
 .link-button.discord:hover {
-  background-color: #4752c4;
+  background-color: #ea580c; /* deeper orange hover */
 }
+
 .container img {
   display: block;
   margin: 0 auto 1rem auto;
   border-radius: 12px;
+  max-width: 100%;
+  height: auto;
 }

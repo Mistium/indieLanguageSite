@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
@@ -7,10 +6,10 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>
+      <Link to="/" className={`nav-btn ${location.pathname === "/" ? "active" : ""}`}>
         🏠 Home
       </Link>
-      <Link to="/about" className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}>
+      <Link to="/about" className={`nav-btn ${location.pathname === "/about" ? "active" : ""}`}>
         📖 About
       </Link>
     </nav>

@@ -6,6 +6,7 @@ export type Language = {
   description: string;
   website?: string;
   discord?: string;
+  github?: string;
 };
 
 export const languages: Language[] = [
@@ -18,6 +19,7 @@ export const languages: Language[] = [
       "W++ is a chaotic scripting language for .NET built for memes, revenge, and everything in between. Powered by sloths.",
     website: "https://wplusplus.org",
     discord: "https://discord.gg/a37hQPPDrp",
+    github: "https://github.com/sinisterMage/WPlusPlus",
   },
   {
     name: "X3",
@@ -28,6 +30,7 @@ export const languages: Language[] = [
       "An easy to learn language for new developers! Held together by duct tape and prayers. And yes, it runs.",
     website: "https://x3documentation.neocities.org/",
     discord: "https://discord.gg/rtcBjz5xgc",
+     github: "https://github.com/XFydro/x3",
   },
   {
     name: "Ranger",
@@ -44,6 +47,7 @@ export const languages: Language[] = [
     logo: "/logos/ros.webp",
     description:
       "ROS (Ruby on Spaces) simplifies its AST by a lot and pretends arguments and lists dont exist.",
+      github: "https://github.com/Backmeet/ruby-on-spaces",
   },
   {
     name: "Citron",
