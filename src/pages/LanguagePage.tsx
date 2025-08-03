@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { languages } from "../data/languagesData";
 import { motion } from "framer-motion";
 import RosRepl from "../components/RosRpel"; // 👈 REPL
+import WppRepl from "../components/WppRepl"; // Adjust path if needed
 import "./LanguagePage.css"; // Adjust the path if needed
 
 
@@ -58,7 +59,13 @@ export default function LanguagePage() {
       <div style={{ marginTop: "2rem" }}>
         <RosRepl />
       </div>
+      
     )}
+    {lang.slug === "wpp" && (
+  <div style={{ marginTop: "2rem" }}>
+    <WppRepl />
+  </div>
+)}
   </motion.div>
 );
 
