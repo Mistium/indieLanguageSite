@@ -69,8 +69,8 @@ export const languages: Language[] = [
     discord: "https://discord.gg/YJ3KTSfMHf",
   },
   {
-    name: "just Compact",
-    slug: "just-compact",
+    name: "Compact",
+    slug: "compact",
     tagline: "Logic stripped to its bare operations.",
     logo: "logos/just-compact.png",
     description: "a minimalist language desgined for logic and idk what else to put xDDD"

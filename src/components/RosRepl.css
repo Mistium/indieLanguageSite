@@ -156,5 +156,8 @@
   text-align: center;
   color: white;
 }
-
+.cm-type {
+  color: #00bcd4; /* cyan */
+  font-weight: bold;
+}
 
