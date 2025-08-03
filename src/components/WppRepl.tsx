@@ -17,6 +17,7 @@ export default function WppRepl() {
   const [output, setOutput] = useState("Ready.");
   const [dragging, setDragging] = useState(false);
   const [outputWidth, setOutputWidth] = useState(30); // %
+  const [mode, setMode] = useState<"interp" | "jit">("interp");
 
   useEffect(() => {
     if (!editorRef.current || !editorReady || editor) return;
@@ -109,11 +110,12 @@ const removeFile = async (name: string) => {
 
   setOutput("Running...");
   try {
-    const res = await fetch("https://wppreplbackend.onrender.com/api/run/wpp", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ code, mode: "interp" }), // or "jit"
-    });
+    const res = await fetch("https://your-render-url/api/run/wpp", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ code, mode }),
+});
+
     const data = await res.json();
     setOutput(data.output || data.error || "No output.");
   } catch (e) {
@@ -145,9 +147,21 @@ const removeFile = async (name: string) => {
       
       <div className="repl-container">
         {/* Toolbar */}
-        <div className="repl-toolbar">
-          <button onClick={runCode}>▶</button>
-        </div>
+        <div className="repl-toolbar-wpp">
+  <button onClick={runCode}>▶</button>
+  <button
+    className="mode-toggle"
+    onClick={() => setMode((prev) => (prev === "interp" ? "jit" : "interp"))}
+    style={{
+      background: mode === "jit" ? "#e11d48" : "#0ea5e9",
+    }}
+  >
+    {mode === "jit" ? "JIT Mode" : "Interpreter Mode"}
+  </button>
+</div>
+
+
+
 
         {/* Editor + Tabs */}
         <div className="repl-editor-panel">
