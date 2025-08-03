@@ -74,5 +74,14 @@ export const languages: Language[] = [
     tagline: "Logic stripped to its bare operations.",
     logo: "logos/just-compact.png",
     description: "a minimalist language desgined for logic and idk what else to put xDDD"
+  },
+  {
+    name: "ddeLang",
+    slug: "ddelang",
+    tagline: "Oh my Diamante",
+    logo: "/logos/ddeLang.png",
+    description: "A shiny programming language designed for building quick scripts with readable syntax.",
+    discord: "https://discord.gg/jrwxVAsQDv",
+    github: "https://github.com/ddededodediamante/ddehighlight"
   }
 ];
