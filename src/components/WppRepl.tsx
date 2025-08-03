@@ -110,7 +110,7 @@ const removeFile = async (name: string) => {
 
   setOutput("Running...");
   try {
-    const res = await fetch("https://your-render-url/api/run/wpp", {
+    const res = await fetch("https://wppreplbackend.onrender.com/api/run/wpp", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ code, mode }),
