@@ -28,6 +28,22 @@ export default function About() {
         <p>
           Thank you for visiting, and we hope you find a language that speaks to you.
         </p>
+
+        <div className="discord-invite">
+          <h2>💬 Join the Conversation</h2>
+          <p>
+            Meet fellow language creators, ask questions, and share your projects in our
+            vibrant Discord community.
+          </p>
+          <a
+            href="https://discord.gg/UvMZrQaMZ2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="join-discord-button"
+          >
+            Join Our Discord
+          </a>
+        </div>
       </div>
     </>
   );

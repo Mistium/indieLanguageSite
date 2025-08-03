@@ -47,3 +47,25 @@
     font-size: 1.05rem;
   }
 }
+.discord-invite {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.join-discord-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background-color: #5865F2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.join-discord-button:hover {
+  background-color: #4752c4;
+}
