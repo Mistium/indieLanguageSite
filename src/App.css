@@ -1,43 +1,68 @@
-/* Global styles */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #e0f7fa; /* fallback cyan tone */
+/* ======================
+   DEFAULT THEME
+   ====================== */
+body.theme-default {
+  background-color: #e0f7fa;
   background-image: url("/backgrounds/logos-bg.png");
   background-repeat: repeat;
-  background-size: 120px; /* adjust based on image detail */
+  background-size: 120px;
   background-attachment: fixed;
   background-position: center;
-  font-family: 'Segoe UI', sans-serif;
   color: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
 }
-body::before {
+
+body.theme-default::before {
   content: "";
   position: fixed;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* tone it down */
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: -1;
   pointer-events: none;
 }
 
-/* Container centering */
+
+/* ======================
+   HACKER THEME
+   ====================== */
+body.theme-hacker {
+  background-color: #000;
+  background-image: none;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+}
+
+body.theme-hacker::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 255, 100, 0.15) 0%, transparent 80%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+/* ======================
+   Shared Styles
+   ====================== */
 .container {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 1rem;
 }
 
-/* Card styling */
 .language-card {
-  background-color: #fef2f2; /* very light red background */
+  background-color: #fef2f2;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.12); /* soft red shadow */
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.12);
   margin-bottom: 2rem;
-  border: 1px solid #fca5a5; /* soft red border */
+  border: 1px solid #fca5a5;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.6s ease forwards;
   opacity: 0;
@@ -45,13 +70,16 @@ body::before {
 
 .language-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.2); /* stronger red on hover */
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.2);
 }
 
+body.theme-hacker .language-card {
+  background-color: #111;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.2);
+}
 
-
-
-/* Logo */
 .language-logo {
   width: 80px;
   height: auto;
@@ -59,9 +87,8 @@ body::before {
   margin-bottom: 1rem;
 }
 
-/* Link styling */
 a {
-  color: #0ea5e9; /* vibrant cyan */
+  color: #0ea5e9;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -72,7 +99,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Language page */
+body.theme-hacker a {
+  color: #00ff88;
+}
+body.theme-hacker a:hover {
+  color: #88ffcc;
+}
+
 .language-page {
   padding: 2rem;
   background-color: #f0fdfa;
@@ -82,17 +115,26 @@ a:hover {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+body.theme-hacker .language-page {
+  background-color: #000;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+}
+
 .language-page h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #06b6d4; /* cyan heading */
+  color: #06b6d4;
+}
+
+body.theme-hacker .language-page h1 {
+  color: #00ff88;
 }
 
 .language-page p {
   font-size: 1.1rem;
 }
 
-/* Buttons */
 .language-buttons {
   margin-top: 1.5rem;
   display: flex;
@@ -101,8 +143,8 @@ a:hover {
 }
 
 .language-buttons a {
-  background-color: #ffedd5; /* light orange */
-  color: #c2410c;            /* strong orange text */
+  background-color: #ffedd5;
+  color: #c2410c;
   padding: 0.6rem 1.1rem;
   border-radius: 8px;
   font-weight: 600;
@@ -111,12 +153,16 @@ a:hover {
 }
 
 .language-buttons a:hover {
-  background-color: #fdba74; /* deeper orange on hover */
+  background-color: #fdba74;
   transform: translateY(-2px);
 }
 
+body.theme-hacker .language-buttons a {
+  background-color: #111;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+}
 
-/* REPL */
 .language-repl {
   margin-top: 2rem;
   padding: 1rem;
@@ -125,6 +171,12 @@ a:hover {
   border-radius: 10px;
   overflow-x: auto;
   font-size: 0.95rem;
+}
+
+body.theme-hacker .language-repl {
+  background-color: #111;
+  color: #00ff88;
+  border: 1px solid #00ff88;
 }
 
 /* Route transition base */
@@ -158,14 +210,4 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.language-card a {
-  color: #ea580c; /* example orange */
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.language-card a:hover {
-  color: #c2410c;
-  text-decoration: underline;
 }

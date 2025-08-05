@@ -5,33 +5,51 @@
   flex-wrap: wrap;
 }
 
-.link-button {
-  display: inline-block;
-  background-color: #fff7ed; /* soft orange background */
-  color: #7c2d12; /* rich orange-brown text */
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
+/* Default Theme */
+.theme-default .link-button {
+  background-color: #fff7ed;
+  color: #7c2d12;
   border: 2px solid transparent;
 }
 
-.link-button:hover {
-  background-color: #fed7aa; /* brighter orange on hover */
+.theme-default .link-button:hover {
+  background-color: #fed7aa;
   transform: translateY(-2px);
   border-color: #fdba74;
 }
 
-.link-button.discord {
-  background-color: #f97316; /* vivid orange */
+.theme-default .link-button.discord {
+  background-color: #f97316;
   color: white;
 }
 
-.link-button.discord:hover {
-  background-color: #ea580c; /* deeper orange hover */
+.theme-default .link-button.discord:hover {
+  background-color: #ea580c;
 }
 
+/* Hacker Theme */
+.theme-hacker .link-button {
+  background-color: #1f2937; /* dark slate */
+  color: #facc15; /* hacker-yellow */
+  border: 2px solid #334155;
+}
+
+.theme-hacker .link-button:hover {
+  background-color: #334155;
+  transform: translateY(-2px);
+  border-color: #facc15;
+}
+
+.theme-hacker .link-button.discord {
+  background-color: #38bdf8; /* blue for Discord-ish vibes */
+  color: black;
+}
+
+.theme-hacker .link-button.discord:hover {
+  background-color: #0ea5e9;
+}
+
+/* Image container */
 .container img {
   display: block;
   margin: 0 auto 1rem auto;
@@ -39,8 +57,10 @@
   max-width: 100%;
   height: auto;
 }
+
+/* Card Styling */
 .language-page-card {
-  background-color: #ffffffcc; /* semi-transparent white */
+  background-color: #ffffffcc;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
@@ -50,3 +70,9 @@
   text-align: center;
 }
 
+/* Hacker theme override */
+.theme-hacker .language-page-card {
+  background-color: #0f172acc;
+  color: #f1f5f9;
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.05);
+}

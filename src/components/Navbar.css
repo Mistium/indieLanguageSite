@@ -2,28 +2,71 @@
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  background-color: #e5eaf7; /* light blue-gray background */
-  border-bottom: 1px solid #cbd5e1; /* subtle border */
+  background-color: #e5eaf7; /* default light blue-gray */
+  border-bottom: 1px solid #cbd5e1;
+  position: relative;
+  z-index: 10; /* keep it above body::before */
 }
 
+/* Theme: hacker */
+.theme-hacker .navbar {
+  background-color: #111827; /* dark gray */
+  border-bottom: 1px solid #334155;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin-left: auto;
+  padding: 8px 12px;
+  background-color: #38bdf8; /* cyan */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #0ea5e9;
+}
+
+/* Nav buttons */
 .nav-btn {
   padding: 8px 16px;
   border: 2px solid transparent;
   border-radius: 6px;
   background-color: #dbeafe; /* light blue */
-  color: #1e40af; /* deep blue text */
+  color: #1e40af;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
 }
 
 .nav-btn:hover {
-  background-color: #bfdbfe; /* slightly darker on hover */
-  border-color: #3b82f6; /* blue border on hover */
+  background-color: #bfdbfe;
+  border-color: #3b82f6;
   color: #1d4ed8;
 }
 
 .nav-btn.active {
-  background-color: #3b82f6; /* active blue */
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Hacker theme buttons */
+.theme-hacker .nav-btn {
+  background-color: #1e293b; /* slate */
+  color: #e2e8f0;
+}
+
+.theme-hacker .nav-btn:hover {
+  background-color: #334155;
+  border-color: #38bdf8;
+  color: #bae6fd;
+}
+
+.theme-hacker .nav-btn.active {
+  background-color: #0ea5e9;
   color: white;
 }
