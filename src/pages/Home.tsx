@@ -8,26 +8,38 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <motion.div
-        className="container"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.3 }}
-      >
-        <h1>🌐 Indie Language Showcase</h1>
-        <div>
-          {languages.map((lang) => (
-            <div key={lang.slug} className="language-card">
-              <img src={lang.logo} alt={lang.name} className="language-logo" />
-              <h2>{lang.name}</h2>
-              <p>{lang.tagline}</p>
-              <p>{lang.description}</p>
-              <Link to={`/language/${lang.slug}`}>View Language →</Link>
-            </div>
-          ))}
-        </div>
-      </motion.div>
+      <main className="container" role="main">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <h1 tabIndex={0}>🌐 Indie Language Showcase</h1>
+          <section className="language-grid">
+            {languages.map((lang) => (
+              <article key={lang.slug} className="language-card">
+                <img
+                  src={lang.logo}
+                  alt={`${lang.name} logo`}
+                  className="language-logo"
+                  loading="lazy"
+                />
+                <h2>{lang.name}</h2>
+                <p><strong>{lang.tagline}</strong></p>
+                <p>{lang.description}</p>
+                <Link
+                  to={`/language/${lang.slug}`}
+                  className="view-link"
+                  aria-label={`View details for ${lang.name}`}
+                >
+                  View Language →
+                </Link>
+              </article>
+            ))}
+          </section>
+        </motion.div>
+      </main>
     </>
   );
 }

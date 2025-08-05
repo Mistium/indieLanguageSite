@@ -12,7 +12,7 @@
   color: white;
 }
 
-
+/* Toolbar - ROS, X3 */
 .repl-toolbar {
   width: 60px;
   background: #2d2d2d;
@@ -35,15 +35,58 @@
   cursor: pointer;
 }
 
+/* Toolbar - W++ */
+.repl-toolbar-wpp {
+  width: 180px;
+  background: #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+.repl-toolbar-wpp button {
+  height: 48px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Run button only */
+.repl-toolbar-wpp button:first-child {
+  width: 48px;
+  background: #28d47c;
+  color: black;
+}
+
+/* Mode toggle (W++) */
+.mode-toggle {
+  width: auto;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+  color: white;
+}
+
+/* Editor Panel */
 .repl-editor-panel {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   min-width: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
+/* Tabs */
 .repl-tabs {
   display: flex;
+  flex-wrap: wrap;
   background: #3a3a3a;
   padding: 6px;
   gap: 6px;
@@ -81,6 +124,7 @@
   cursor: pointer;
 }
 
+/* Editor */
 .repl-editor {
   flex-grow: 1;
   height: 100%;
@@ -93,19 +137,21 @@
   height: 100% !important;
 }
 
-
+/* Divider */
 .repl-divider {
   width: 5px;
   background: #666;
   cursor: col-resize;
 }
 
+/* Output */
 .repl-output {
   background: #2d2d2d;
   padding: 1rem;
   border-left: 1px solid #444;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .repl-output-header {
@@ -120,44 +166,49 @@
   font-size: 0.9rem;
   white-space: pre-wrap;
 }
-.repl-toolbar-wpp {
-  width: 180px; /* wide enough for full button */
-  background: #2d2d2d;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 8px;
-  gap: 8px;
-}
 
-.repl-toolbar-wpp button {
-  height: 48px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* ⬇️ override width only for run button */
-.repl-toolbar-wpp button:first-child {
-  width: 48px;
-  background: #28d47c;
-  color: black;
-}
-
-/* ⬇️ no fixed width for the mode toggle */
-.mode-toggle {
-  width: auto;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-  white-space: nowrap;
-  text-align: center;
-  color: white;
-}
+/* CodeMirror type styling */
 .cm-type {
-  color: #00bcd4; /* cyan */
+  color: #00bcd4;
   font-weight: bold;
 }
 
+/* ------------------- Responsive Styles ------------------- */
+@media (max-width: 768px) {
+  .repl-container {
+    flex-direction: column;
+    height: auto;
+    margin: 1rem;
+    border: none;
+  }
+
+  .repl-toolbar,
+  .repl-toolbar-wpp {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    gap: 10px;
+  }
+
+  .repl-editor-panel {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .repl-editor {
+    height: 250px;
+    overflow: auto;
+  }
+
+  .repl-divider {
+    display: none;
+  }
+
+  .repl-output {
+    width: 100% !important;
+    border-left: none;
+    border-top: 1px solid #444;
+  }
+}

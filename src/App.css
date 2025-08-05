@@ -24,7 +24,6 @@ body.theme-default::before {
   pointer-events: none;
 }
 
-
 /* ======================
    HACKER THEME
    ====================== */
@@ -46,7 +45,6 @@ body.theme-hacker::before {
   pointer-events: none;
 }
 
-
 /* ======================
    Shared Styles
    ====================== */
@@ -56,12 +54,18 @@ body.theme-hacker::before {
   padding: 1rem;
 }
 
+/* Responsive grid for language cards */
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
 .language-card {
   background-color: #fef2f2;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(239, 68, 68, 0.12);
-  margin-bottom: 2rem;
   border: 1px solid #fca5a5;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.6s ease forwards;
@@ -81,7 +85,7 @@ body.theme-hacker .language-card {
 }
 
 .language-logo {
-  width: 80px;
+  width: 100px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -184,17 +188,14 @@ body.theme-hacker .language-repl {
   opacity: 0;
   transform: translateY(10px);
 }
-
 .fade-enter-active {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 300ms ease, transform 300ms ease;
 }
-
 .fade-exit {
   opacity: 1;
 }
-
 .fade-exit-active {
   opacity: 0;
   transition: opacity 200ms ease;
@@ -209,5 +210,40 @@ body.theme-hacker .language-repl {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ======================
+   Responsive Tweaks
+   ====================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .language-card {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .language-logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+  }
+
+  .language-page h1 {
+    font-size: 2rem;
+  }
+
+  .language-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .language-buttons a {
+    width: 100%;
+    text-align: center;
   }
 }

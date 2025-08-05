@@ -1,42 +1,45 @@
 .navbar {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
-  background-color: #e5eaf7; /* default light blue-gray */
+  background-color: #e5eaf7;
   border-bottom: 1px solid #cbd5e1;
   position: relative;
-  z-index: 10; /* keep it above body::before */
+  z-index: 10;
 }
 
-/* Theme: hacker */
-.theme-hacker .navbar {
-  background-color: #111827; /* dark gray */
-  border-bottom: 1px solid #334155;
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* Theme toggle button */
-.theme-toggle {
-  margin-left: auto;
-  padding: 8px 12px;
-  background-color: #38bdf8; /* cyan */
-  color: white;
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger button (mobile only) */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
-.theme-toggle:hover {
-  background-color: #0ea5e9;
+/* Nav links wrapper */
+.nav-links {
+  display: flex;
+  gap: 1rem;
 }
 
-/* Nav buttons */
 .nav-btn {
   padding: 8px 16px;
   border: 2px solid transparent;
   border-radius: 6px;
-  background-color: #dbeafe; /* light blue */
+  background-color: #dbeafe;
   color: #1e40af;
   text-decoration: none;
   font-weight: bold;
@@ -55,8 +58,13 @@
 }
 
 /* Hacker theme buttons */
+.theme-hacker .navbar {
+  background-color: #111827;
+  border-bottom: 1px solid #334155;
+}
+
 .theme-hacker .nav-btn {
-  background-color: #1e293b; /* slate */
+  background-color: #1e293b;
   color: #e2e8f0;
 }
 
@@ -69,4 +77,33 @@
 .theme-hacker .nav-btn.active {
   background-color: #0ea5e9;
   color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 1rem;
+    background-color: #e5eaf7;
+    border: 1px solid #cbd5e1;
+    padding: 0.5rem;
+    border-radius: 8px;
+    z-index: 999;
+  }
+
+  .theme-hacker .nav-links {
+    background-color: #1e293b;
+    border-color: #334155;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
 }
