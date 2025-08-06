@@ -37,6 +37,13 @@ export default function Navbar() {
           >
             📖 About
           </Link>
+          <Link
+            to="/ulang"
+            className={`nav-btn ${location.pathname === "/ulang" ? "active" : ""}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            📦 Ulang
+          </Link>
         </div>
       </div>
       <div className="navbar-right">
