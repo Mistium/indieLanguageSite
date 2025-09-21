@@ -75,7 +75,7 @@ Start the local webserver with vite to check your changes
 npm run dev
 ```
 
-## 📤 Step 5: Submit a Pull Request
+## 📤 Step 6: Submit a Pull Request
 
 Once you've added your language, create a Pull Request (PR) to submit your changes.
 
