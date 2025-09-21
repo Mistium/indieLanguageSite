@@ -1,69 +1,76 @@
-# React + TypeScript + Vite
+# 🌐 Add Your Language to [indielangs.org](https://indielangs.org)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey there, indie language creator! 👋  
+Thanks for choosing to showcase your language on **indielangs.org** — the community hub for experimental, chaotic, powerful, and fun programming languages.
 
-Currently, two official plugins are available:
+Follow this quick guide to get your language listed! 💻🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Step 1: Fork the Repository
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Click the `Fork` button at the top right of this repo and clone it locally:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+git clone https://github.com/IndieLangsAssociation/indieLanguageSite
+cd indieLanguageSite
+````
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Step 2: Add Your Language Metadata
+
+Open the file:
+
+```
+src/data/languagesData.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then, add a new object to the exported array like this:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```ts
+{
+  name: "ExampleLang", // Display name (required)
+  slug: "examplelang", // URL-friendly identifier, lowercase & no spaces (required)
+  tagline: "this is an example", // Short and catchy (required)
+  logo: "/logos/examplelang.png", // Path to logo file (required)
+  description: "this is an example to show how to add a language to indielangs.org", // Full description (required)
+  website: "https://example.com", // Optional but recommended
+  discord: "https://discord.gg/example", // Optional
+  github: "https://github.com/example/examplelang", // Optional
+},
 ```
+
+✅ **Required Fields:** `name`, `slug`, `tagline`, `logo`, `description`
+ℹ️ *Optional Fields:* `website`, `discord`, `github`
+
+---
+
+## 🖼️ Step 3: Add Your Logo
+
+Place your logo in:
+
+```
+public/logos/
+```
+
+Supported formats: `.webp` (preferred), `.png`, `.jpg`, etc.
+🖼️ **Tip:** Use `.webp` for smaller file size and better SEO!
+
+---
+
+## 📤 Step 4: Submit a Pull Request
+
+Once you've added your language, create a Pull Request (PR) to submit your changes.
+
+We’ll review it and either approve ✅ or request changes 🔁 with helpful feedback.
+
+---
+
+## 💬 Questions?
+
+Feel free to [open an issue](https://github.com/IndieLangsAssociation/indieLanguageSite) or join our [Discord](https://discord.gg/UvMZrQaMZ2) if you’re unsure about anything!
+
+---
+
+🎉 That’s it — welcome to the indie language crew!
