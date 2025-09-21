@@ -16,13 +16,21 @@ git clone https://github.com/IndieLangsAssociation/indieLanguageSite
 cd indieLanguageSite
 ````
 
+## 📥 Step 2: Install Dependencies
+
+Install dependancies like vite for easier development
+
+```bash
+npm ci
+```
+
 ---
 
-## 📦 Step 2: Add Your Language Metadata
+## 📦 Step 3: Add Your Language Metadata
 
 Open the file:
 
-```
+```txt
 src/data/languagesData.ts
 ```
 
@@ -46,11 +54,11 @@ Then, add a new object to the exported array like this:
 
 ---
 
-## 🖼️ Step 3: Add Your Logo
+## 🖼️ Step 4: Add Your Logo
 
 Place your logo in:
 
-```
+```txt
 public/logos/
 ```
 
@@ -59,7 +67,15 @@ Supported formats: `.webp` (preferred), `.png`, `.jpg`, etc.
 
 ---
 
-## 📤 Step 4: Submit a Pull Request
+## 🧪 Step 5: Test
+
+Start the local webserver with vite to check your changes
+
+```bash
+npm run dev
+```
+
+## 📤 Step 6: Submit a Pull Request
 
 Once you've added your language, create a Pull Request (PR) to submit your changes.
 
