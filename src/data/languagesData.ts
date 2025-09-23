@@ -43,10 +43,10 @@ export const languages: Language[] = [
   {
     name: "ROS",
     slug: "ros",
-    tagline: "at least we are not managing memory",
+    tagline: "lua? never heard of it",
     logo: "/logos/ros.webp",
     description:
-      "ROS (Ruby on Spaces) simplifies its AST by a lot and pretends arguments and lists dont exist.",
+      "ROS or Ruby on spaces is a modular language designed to be so modular you could redo the expression system during runtime and it would still work. ROS has many sub-sets. Just ROS is for the Python version, ROSL is for the Lua ver, ROSLU is for the Luau version, ROSC is the ROS -> C traspiler. ROS will be the better Lua due to being smaller and the  same speed with almost the same syntax as Lua, but don't like a part of it heck, change it! This. Is. ROS.",
       github: "https://github.com/Backmeet/ruby-on-spaces",
   },
   {
