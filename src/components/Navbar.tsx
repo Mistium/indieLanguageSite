@@ -44,6 +44,14 @@ export default function Navbar() {
           >
             📦 Ulang
           </Link>
+          {/* 🆕 Submit link */}
+          <Link
+            to="/submit"
+            className={`nav-btn ${location.pathname === "/submit" ? "active" : ""}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            ➕ Submit
+          </Link>
         </div>
       </div>
       <div className="navbar-right">

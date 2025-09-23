@@ -247,3 +247,41 @@ body.theme-hacker .language-repl {
     text-align: center;
   }
 }
+/* Submit Page Card */
+.submit-card {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent for default theme */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Hacker theme variant */
+body.theme-hacker .submit-card {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  box-shadow: 0 0 16px rgba(0, 255, 136, 0.3);
+}
+.dummy-guide summary {
+  background: rgba(14, 165, 233, 0.1); /* light blue in default theme */
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.dummy-guide summary:hover {
+  background: rgba(14, 165, 233, 0.2);
+}
+
+body.theme-hacker .dummy-guide summary {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+}
+
+body.theme-hacker .dummy-guide summary:hover {
+  background: rgba(0, 255, 136, 0.2);
+}
