@@ -1,6 +1,6 @@
-import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
 
-type Theme = 'default' | 'hacker';
+type Theme = "default" | "hacker";
 
 interface ThemeContextType {
   theme: Theme;
@@ -10,15 +10,18 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>('default');
+  const [theme, setThemeState] = useState<Theme>(() => {
+    return (localStorage.getItem("theme") as Theme) || "default";
+  });
 
   useEffect(() => {
-    document.body.className = ''; // reset all theme classes
+    document.body.classList.remove("theme-default", "theme-hacker");
     document.body.classList.add(`theme-${theme}`);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme: setThemeState }}>
       {children}
     </ThemeContext.Provider>
   );
@@ -26,6 +29,6 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
-  if (!context) throw new Error('useTheme must be used within ThemeProvider');
+  if (!context) throw new Error("useTheme must be used within ThemeProvider");
   return context;
 };
