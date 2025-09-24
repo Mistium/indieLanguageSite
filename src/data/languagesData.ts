@@ -52,11 +52,11 @@ export const languages: Language[] = [
   {
     name: "Citron",
     slug: "citron",
-    tagline: "Scripting like a pro in turbowarp",
+    tagline: "Oh my citron",
     logo: "/logos/citron.png",
     description:
-      "Citron lets you code like a Scratch wizard but with grown-up power. It’s citrusy and chaotic.",
-    website: "https://scratch.mit.edu/projects/1202695164",
+      "A simple, citrusy little language that runs solely on lemons.",
+    website: "https://turbowarp.org/1202695164?offscreen&hqpen&fps=250",
     discord: "https://discord.gg/gY9JMQYBg7",
   },
   {
